@@ -1,0 +1,185 @@
+﻿@using A4AeroTest_MVC5.Models;
+@model BusinessViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card" style="width: 100%;">
+    <div class="card-body">
+        <h4 class="card-title" style="color: black">Business Entities</h4>
+        <hr>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <input type="hidden" name="Id" id="Id" value="0">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control", @id= "Code" } })
+                                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @id = "Name" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @id = "Email" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Mobile, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control", @id = "Mobile" } })
+                                @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", @id = "Phone" } })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Street, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control", @id = "Street" } })
+                                @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", @id = "City" } })
+                                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control", @id = "State" } })
+                                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control", @id = "Country" } })
+                                @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control", @id = "Zip" } })
+                                @Html.ValidationMessageFor(model => model.Zip, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                      
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.ContactPerson, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.ContactPerson, new { htmlAttributes = new { @class = "form-control", @id = "ContactPerson" } })
+                                @Html.ValidationMessageFor(model => model.ContactPerson, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.ReferredBy, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                @Html.EditorFor(model => model.ReferredBy, new { htmlAttributes = new { @class = "form-control", @id = "ReferredBy" } })
+                                @Html.ValidationMessageFor(model => model.ReferredBy, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            @Html.LabelFor(model => model.Balance, htmlAttributes: new { @class = "control-label col-4" })
+                            <div class="col-8">
+                                <input type="number"class = "form-control"name="Balance" id="Balance"/>
+                                @*@Html.EditorFor(model => model.Balance, new { htmlAttributes = new { @class = "form-control" } })*@
+                                @Html.ValidationMessageFor(model => model.Balance, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <hr>
+                        <button type="submit" value="Submit" class="btn btn-success btn-lg" style="float:right; margin-top:5px;">Submit</button>
+                    </div>
+
+                 
+                    <div class="col-md-6"></div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            
+
+            if (@ViewBag.id> 0) {
+                GetById(@ViewBag.id)
+            }
+        })
+
+    
+        function GetById(id) {
+
+            $.ajax({
+                method:"GET",
+                url: '@Url.Action("GetById")',
+                async: false,
+                data: {id:id},
+                success: (function (data) {
+                  console.log(data);
+                    $("#Id").val(data.Id);
+                    $("#Code").val(data.Code);
+                    $("#Name").val(data.Name);
+                    $("#Email").val(data.Email);
+                    $("#Mobile").val(data.Mobile);
+                    $("#Phone").val(data.Phone);
+                    $("#Street").val(data.Street);
+                    $("#City").val(data.City);
+                    $("#State").val(data.State);
+                    $("#Country").val(data.Country);
+                    $("#Zip").val(data.Zip);
+                    $("#ContactPerson").val(data.ContactPerson);
+                    $("#ReferredBy").val(data.State);
+                    $("#Balance").val(data.Balance);
+                }),
+                error: (function () {
+
+                })
+
+            })
+
+        }
+
+    </script>
+}
